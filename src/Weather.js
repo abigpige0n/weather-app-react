@@ -6,7 +6,7 @@ export default function Weather () {
     return(
         <Loader
         type="Puff"
-        color="#00BFFF"
+        color="#red"
         height={100}
         width={100}
      />
