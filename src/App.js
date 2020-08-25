@@ -1,28 +1,28 @@
-import React from "react";
-import "./styles.css";
-import Header from "./Header";
-import Search from "./Search";
-import SearchResults from "./SearchResults";
-import Footer from "./Footer";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Weather from "./Weather";
 
-export default function App() {
-  let weatherdata = {
-    city: "Toronto",
-    wind: "5",
-    temperature: "25",
-    date: "Sun. 2 Aug 2020",
-    time: "21:00",
-    description: "clouds",
-    humidity: "75"
-  };
+function App() {
   return (
-    <div className="container">
-      <div className="weather-app">
-        <Header weatherData={weatherdata} />
-        <Search />
-        <SearchResults weatherData={weatherdata} />
-        <Footer />
-      </div>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1>
+          Welcome to my React test site!
+        </h1>
+        <h2><Weather /></h2>
+        <a
+          className="App-link"
+          href="https://github.com/abigpige0n/weather-app-react"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Check out the Github here!
+        </a>
+      </header>
     </div>
   );
 }
+
+export default App;
