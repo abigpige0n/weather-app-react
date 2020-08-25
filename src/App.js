@@ -8,12 +8,12 @@ import Footer from "./Footer";
 export default function App() {
   let weatherdata = {
     city: "Toronto",
-    wind: "5",
-    temperature: "25",
-    date: "Sun. 2 Aug 2020",
-    time: "21:00",
-    description: "clouds",
-    humidity: "75"
+    wind: "10",
+    temperature: "26",
+    date: "Tues. 25 Aug 2020",
+    time: "00:30",
+    description: "partly cloudy",
+    humidity: "72"
   };
   return (
     <div className="container">

@@ -8,9 +8,9 @@ export default function SearchResults(props) {
         <div className="col-2" />
         <div className="col-3">
           <img
-            src={"http://openweathermap.org/img/wn/03d@2x.png"}
+            src={"http://openweathermap.org/img/wn/02n@2x.png"}
             id="icon"
-            alt="clouds"
+            alt="partly cloudy"
             width="150"
           />
         </div>
