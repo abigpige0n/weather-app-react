@@ -2,6 +2,7 @@ import React from "react";
 import "./styles.css";
 import FormattedDate from "./FormattedDate";
 import FormattedTime from "./FormattedTime";
+import WeatherTemperature from "./WeatherTemperature"
 
 export default function SearchResults(props) {
   return (
@@ -19,16 +20,7 @@ export default function SearchResults(props) {
           <div className="col-2">
             <ul className="basic-stats">
               <li>
-                <span className="temp" id="temp-now">
-                  {Math.round(props.data.temperature)}
-                </span>
-                <a href="" id="celsius-link" className="active">
-                  °C
-                </a>
-                |
-                <a href="" id="fahrenheit-link">
-                  °F
-                </a>
+                <WeatherTemperature celsius={props.data.temperature}/>
               </li>
               <li id="description">{props.data.description}</li>
               <li id="date"><FormattedDate date={props.data.date} /></li>
