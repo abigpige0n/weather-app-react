@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 import FormattedDate from "./FormattedDate";
 import FormattedTime from "./FormattedTime";
-import WeatherTemperature from "./WeatherTemperature"
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function SearchResults(props) {
   return (
