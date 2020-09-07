@@ -3,6 +3,7 @@ import axios from "axios";
 import "./styles.css";
 import Loading from "./Loading";
 import FormattedDate from "./FormattedDate";
+import FormattedTime from "./FormattedTime";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ready: false });
@@ -16,7 +17,6 @@ export default function Weather(props) {
         description: response.data.weather[0].description,
         iconUrl: "http://openweathermap.org/img/wn/02n@2x.png",
         date: new Date(response.data.dt * 1000),
-        time : "03:00",
     });
   }
 
@@ -67,7 +67,7 @@ export default function Weather(props) {
               </li>
               <li id="description">{weatherData.description}</li>
               <li id="date"><FormattedDate date={weatherData.date} /></li>
-              <li id="time">{weatherData.time}</li>
+              <li id="time"><FormattedTime date={weatherData.date} /></li>
             </ul>
           </div>
           <div className="col-3">
