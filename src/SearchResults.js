@@ -18,7 +18,7 @@ export default function SearchResults(props) {
           <ul className="basic-stats">
             <li>
               <span className="temp" id="temp-now">
-                {props.weatherData.temperature}
+                26
               </span>
               <a href="" id="celsius-link" className="active">
                 °C
@@ -28,19 +28,19 @@ export default function SearchResults(props) {
                 °F
               </a>
             </li>
-            <li id="description">{props.weatherData.description}</li>
-            <li id="date">{props.weatherData.date}</li>
-            <li id="time">{props.weatherData.time}</li>
+            <li id="description">Partly Cloudy</li>
+            <li id="date">Tues. 25 Aug 2020</li>
+            <li id="time">00:30</li>
           </ul>
         </div>
         <div className="col-3">
           <ul className="advanced-stats">
             <li>
               Humidity: <span id="humidity" />
-              {props.weatherData.humidity} %
+              72 %
             </li>
             <li>
-              Wind:<span id="wind">{props.weatherData.wind}</span> km/h
+              Wind:<span id="wind">72</span> km/h
             </li>
           </ul>
         </div>

@@ -6,7 +6,7 @@ export default function Header(props) {
     <div className="Header">
       <h1>
         <i className="fas fa-seedling" />
-        <span>{props.weatherData.city}</span>
+        <span>Toronto</span>
         <span id="city" /> Weather
         <i className="fas fa-seedling" />
       </h1>

@@ -1,20 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
-import SearchResults from "./SearchResults";
 import "./styles.css";
 
 export default function Search() {
   
-  const [weatherData, setWeatherData] = useState({});
-  function handleResponse(response) {
-    console.log(response.data);
-    setWeatherData({
-    })
-  }
   const apiKey = "97a29dafab1111956594c069c61f40c";
   let city = "Toronto";
   let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(handleResponse);
+
   return (
     <div className="Search">
       <form id="search-bar">
@@ -35,7 +28,6 @@ export default function Search() {
           </div>
         </div>
       </form>
-      <SearchResults weatherData={weatherData} />
     </div>
   );
 }
