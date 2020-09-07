@@ -12,7 +12,7 @@ export default function WeatherForecast(props) {
         setLoaded(true);
     }
 
-    if (loaded) {
+    if (loaded && props.city === forecast.city.name) {
         return (
             <div className="Forecast row">
                     <WeatherForecastDetails data={forecast.list[0]} />
@@ -27,7 +27,7 @@ export default function WeatherForecast(props) {
         let apiKey = "17542c4e1dbe7d5f6eac4d6130c79818";
         let url = `http://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`;
         axios.get(url).then(handleForecastResponse);
-        return props.city;
+        return null;
     }
     
 }
