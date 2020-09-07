@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import axios from "axios";
+import SearchResults from "./SearchResults";
 import "./styles.css";
 
 export default function Search() {
   
+  const [weatherData, setWeatherData] = useState({});
   function handleResponse(response) {
     console.log(response.data);
+    setWeatherData({
+    })
   }
   const apiKey = "97a29dafab1111956594c069c61f40c";
   let city = "Toronto";
@@ -31,6 +35,7 @@ export default function Search() {
           </div>
         </div>
       </form>
+      <SearchResults weatherData={weatherData} />
     </div>
   );
 }

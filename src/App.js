@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Header from "./Header";
 import Search from "./Search";
-import SearchResults from "./SearchResults";
 import Footer from "./Footer";
 
 export default function App() {
@@ -20,7 +19,6 @@ export default function App() {
       <div className="weather-app">
         <Header weatherData={weatherdata} />
         <Search />
-        <SearchResults weatherData={weatherdata} />
         <Footer />
       </div>
     </div>
