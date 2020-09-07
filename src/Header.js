@@ -6,8 +6,7 @@ export default function Header(props) {
     <div className="Header">
       <h1>
         <i className="fas fa-seedling" />
-        <span>{props.defaultCity}</span>
-        <span id="city" /> Weather
+        <span id="city" />Your Weather
         <i className="fas fa-seedling" />
       </h1>
       <h2>What's it like out?</h2>

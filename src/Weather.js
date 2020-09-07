@@ -46,7 +46,7 @@ export default function Weather(props) {
               <input
                 className="searchbar"
                 type="search"
-                placeholder="Search Weather..."
+                placeholder="Toronto"
                 id="city"
                 autoComplete="off"
                 onChange={handleCityChange}
