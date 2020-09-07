@@ -3,6 +3,7 @@ import axios from "axios";
 import "./styles.css";
 import Loading from "./Loading";
 import SearchResults from "./SearchResults";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -17,11 +18,12 @@ export default function Weather(props) {
         description: response.data.weather[0].description,
         iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
         date: new Date(response.data.dt * 1000),
+        city: response.data.name,
     });
   }
 
   function search() {
-    let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    let apiKey = "17542c4e1dbe7d5f6eac4d6130c79818";
     let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -58,6 +60,7 @@ export default function Weather(props) {
           </div>
         </form>
         <SearchResults data={weatherData} />
+        <WeatherForecast city={weatherData.city} />
       </div>
     );
   } else {
