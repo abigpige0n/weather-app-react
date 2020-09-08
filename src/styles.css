@@ -61,11 +61,6 @@ body {
     font-family: "Yanone Kaffeesatz", sans-serif;
   }
 
-  .Forecast canvas {
-    display: block;
-    text-align: center;
-  }
-  
   .temp {
     font-family: "Quicksand", sans-serif;
     color: #f58e85;
